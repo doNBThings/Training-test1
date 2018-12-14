@@ -1,6 +1,7 @@
 package com.dothings.training.test1.web;
 
 
+import com.dothings.training.test1.consumer.SearchConsumer;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -30,12 +31,16 @@ import com.dothings.training.test1.service.ITTestFirstService;
 public class TTestFirstController {
 	@Autowired
 	private ITTestFirstService firstService;
+	@Autowired
+	SearchConsumer searchConsumer;
 	@ApiOperation("根据id查询")
 	@GetMapping("{id}")
-	public TTestFirst selectById(@ApiParam("id")@PathVariable Integer id){
-		TTestFirst testFirst = firstService.selectById(id);
-//		int a = 5/0;
-		return testFirst;
+	public void selectById(@ApiParam("id")@PathVariable Integer id){
+//		TTestFirst testFirst = firstService.selectById(id);
+////		int a = 5/0;
+//		return testFirst;
+		searchConsumer.loadmessage("{ \t\"id\": \"5\", \t\"cource\": \"语文\", \t\"title\": \"渣渣辉\" }");
+
 	}
 	@PostMapping("/")
 	public Status insert(TTestFirst testFirst){
