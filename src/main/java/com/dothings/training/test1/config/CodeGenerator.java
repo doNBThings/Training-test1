@@ -17,7 +17,11 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
 import com.baomidou.mybatisplus.toolkit.StringUtils;
-
+/**
+ * 代码生成工具
+ * @author c_ganpeikang
+ *
+ */
 public class CodeGenerator {
 	 /**
      * <p>

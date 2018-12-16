@@ -27,7 +27,7 @@ import com.dothings.training.test1.service.ITTestFirstService;
  */
 @Api(description="第一个请求")
 @RestController
-@RequestMapping("/first")
+@RequestMapping("/first222")
 public class TTestFirstController {
 	@Autowired
 	private ITTestFirstService firstService;
